@@ -78,6 +78,7 @@ class ArticleController extends Controller
         return $save->id;
     }
     private function uploafile($file,$id)
+        
     {
         $address='Articles/'.$id;
         Storage::disk('media')->makeDirectory($address);
