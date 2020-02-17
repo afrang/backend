@@ -23,8 +23,8 @@ class ArticleController extends Controller
      */
     public function index(Request $request,b_article $b_article)
     {
-     //   return $request->group;
-       return BlogArticleResource::collection($b_article->where('group',$request->group)->paginate(1));
+
+       return BlogArticleResource::collection($b_article->where('group',$request->group)->with('totags')->paginate(10));
     }
 
     /**
@@ -95,17 +95,23 @@ class ArticleController extends Controller
     private function tagmanager($id,$tags){
         $tags=json_decode($tags);
         $array=[];
+
         foreach($tags as $key){
-            array_push($array,$key->text);
+            if(isset($key->text)){
+                array_push($array,$key->text);
+
+            }else{
+                array_push($array);
+            }
         }
-        $blog=new b_group();
-        $blog=$blog->find($id);
+        $article=new b_article();
+        $article=$article->find($id);
         $sync=array();
         foreach($array as $key){
             $tag= tag::firstOrCreate(['name'=>$key]);
             array_push($sync,$tag->id);
         }
-        $blog->totags()->sync($sync);
+        $article->totags()->sync($sync);
 
     }
     /**
@@ -137,9 +143,39 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,b_article $b_article)
     {
-        //
+        $request->validate([
+            'name'=>[
+                'required',
+                Rule::notIn(['null']),
+            ],
+            'url'=>[
+                'required',
+                Rule::notIn(['null']),
+                Rule::unique('b_groups','url')->ignore($id),
+            ]
+        ]);
+        $save=  $b_article->where('id',$id)->first();
+        $save->name= $request->name;
+        $save->publish= 1;
+        $save->text= $request->text;
+        $save->url= $request->url;
+        $save->keywords= $request->keywords;
+        $save->description= $request->description;
+        $save->save();
+        if($request->file!=null){
+            self::uploafile($request->file,$save->id);
+
+
+        }
+        $tags=$request->tag;
+
+
+
+        self::tagmanager($save->id,$request->tag);
+
+        return $save->id;
     }
 
     /**
