@@ -15,7 +15,7 @@ class TagController extends Controller
      */
     public function index(tag $tag)
     {
-        return  $tag->all();    
+        return  $tag->all();
     }
 
     /**
@@ -79,8 +79,11 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,tag $tag)
     {
-        //
+        $del=$tag->with('toArticle','toBlog')->where('id',$id)->first();
+        $del->toArticle()->sync([]);
+        $del->toBlog()->sync([]);
+        $del->delete();
     }
 }

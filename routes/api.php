@@ -25,6 +25,9 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         Route::post('Blobggroupupdate/{id}', 'Blog\GroupController@update');
         Route::resource('BlogArticle', 'Blog\ArticleController');
         Route::post('BlogArticleupdate/{id}', 'Blog\ArticleController@update');
+        /* Setting */
+        Route::resource('SettingController', 'Setting\settingcontroller');
+
 
 
 });

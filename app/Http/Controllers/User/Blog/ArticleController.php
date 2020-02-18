@@ -24,7 +24,7 @@ class ArticleController extends Controller
     public function index(Request $request,b_article $b_article)
     {
 
-       return BlogArticleResource::collection($b_article->where('group',$request->group)->with('totags')->paginate(10));
+       return BlogArticleResource::collection($b_article->where('group',$request->group)->where('name','like','%'.$request->search.'%')->with('totags')->paginate(10));
     }
 
     /**
@@ -78,7 +78,7 @@ class ArticleController extends Controller
         return $save->id;
     }
     private function uploafile($file,$id)
-        
+
     {
         $address='Articles/'.$id;
         Storage::disk('media')->makeDirectory($address);
@@ -185,8 +185,11 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,b_article $b_article)
     {
-        //
+        Storage::disk('filemanager')->deleteDirectory('/Articles/'.$id);
+        Storage::disk('media')->deleteDirectory('/Blog/'.$id);
+        $b_article->where('id',$id)->delete();
+
     }
 }
