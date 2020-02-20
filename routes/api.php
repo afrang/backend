@@ -18,6 +18,7 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         Route::resource('Roles', 'Profile\RolesController');
         Route::resource('Users', 'Profile\UsersController');
         Route::resource('Filemanager', 'Filemanager\UploadController');
+        Route::resource('fileupload', 'Filemanager\fileupload');
         /* Tags */
         Route::resource('Tag','Tag\TagController');
         /* Blog */
@@ -28,6 +29,8 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         /* Setting */
         Route::resource('SettingController', 'Setting\settingcontroller');
         Route::resource('ContactusController', 'Setting\ContactusController');
+        /* Gallery */
+        Route::resource('GalleryGroup', 'Gallery\gallerygroupcontroller');
 
 
 

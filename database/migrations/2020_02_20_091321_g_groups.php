@@ -17,8 +17,8 @@ class GGroups extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('urlname');
-            $table->longText('text');
-            $table->string('image');
+            $table->longText('text')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

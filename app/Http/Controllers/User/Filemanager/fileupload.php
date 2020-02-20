@@ -1,22 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\User\Gallery;
+namespace App\Http\Controllers\User\Filemanager;
 
 use App\Http\Controllers\Controller;
-use App\Model\Gallery\g_group;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
 
-class gallerygroupcontroller extends Controller
+class fileupload extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(g_group $g_group)
+    public function index()
     {
-        return  $g_group->with('todetail')->get();
+        //
     }
 
     /**
@@ -35,22 +34,14 @@ class gallerygroupcontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,g_group $g_group)
+    public function store(Request $request)
     {
-        $request->validate([
-            'name'=>[
-                'required',
-            ],
-
-            'urlname'=>[
-                'required',
-                'unique:g_groups,urlname'
-            ]
-        ]);
-        $save               =new g_group();
-        $save->name         =$request->name;
-        $save->urlname      =$request->urlname;
-        $save->save();
+        $rand=rand(1000,9999);
+         Storage::disk('media')->makeDirectory($request->mode);
+        Storage::disk('media')->makeDirectory($request->mode.'/'.$request->id);
+        $fileName = $request->name.'.'.$request->file->extension();
+        $request->file->move(public_path('media').'/'.$request->mode.'/'.$request->id, $fileName);
+        return  $fileName.'?='.$rand;
 
     }
 
@@ -83,25 +74,9 @@ class gallerygroupcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id,g_group $g_group)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'name'=>[
-                'required',
-            ],
-
-            'urlname'=>[
-                'required',
-                Rule::unique('g_groups','urlname')->ignore($id),
-
-            ]
-        ]);
-        $save               =$g_group->find($id);
-        $save->name         =$request->name;
-        $save->text         =$request->text;
-        $save->urlname      =$request->urlname;
-        $save->save();
-
+        //
     }
 
     /**
@@ -110,8 +85,8 @@ class gallerygroupcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,Request $request)
     {
-        //
+        return  $request->all();
     }
 }

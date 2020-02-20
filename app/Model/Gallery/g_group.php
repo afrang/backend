@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class g_group extends Model
 {
-   function togroup(){
+   function todetail(){
        return $this->hasOne('App\Model\Gallery\g_detail','id','parent');
    }
 }
