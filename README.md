@@ -10,7 +10,7 @@
   - Soof **Desktop Sotware**
   - Badoom **Appilcation Series**
 # Prerequisites
-   > You need Clone https://github.com/afrang/backend  for front
+   > You need Clone https://github.com/afrang/front  for front
 ## most use sorurce in Backend  
 | SourceName | URL |
 | ------ | ------ |
