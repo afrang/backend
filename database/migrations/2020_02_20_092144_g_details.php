@@ -16,7 +16,7 @@ class GDetails extends Migration
         Schema::create('g_details', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
-            $table->string('file');
+            $table->string('file')->nullable();
             $table->integer('orders')->nullable();
             $table->boolean('publish')->default(true);
             $table->longText('text')->nullable();

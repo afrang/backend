@@ -17,7 +17,7 @@ class SysSettings extends Migration
             $table->bigIncrements('id');
             $table->string('webname')->nullable();
             $table->string('description')->nullable();
-            $table->string('keywrods')->nullable();
+            $table->string('keywords')->nullable();
             $table->string('lang')->default('fa');
             $table->string('wellcometext')->nullable();
             $table->string('logo')->nullable();

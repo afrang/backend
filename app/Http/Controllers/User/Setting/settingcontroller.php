@@ -67,9 +67,15 @@ class settingcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,sys_setting $sys_setting)
     {
-        //
+        $save               =$sys_setting->find($id);
+        $save->webname      =$request->webname;
+        $save->description  =$request->description;
+        $save->keywords     =$request->keywords;
+        $save->wellcometext =$request->wellcometext;
+        $save->logo         =$request->logo;
+        $save->save();
     }
 
     /**

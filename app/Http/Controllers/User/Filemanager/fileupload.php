@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User\Filemanager;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManager;
 
 class fileupload extends Controller
 {
@@ -39,8 +40,19 @@ class fileupload extends Controller
         $rand=rand(1000,9999);
          Storage::disk('media')->makeDirectory($request->mode);
         Storage::disk('media')->makeDirectory($request->mode.'/'.$request->id);
+        Storage::disk('media')->makeDirectory($request->mode.'/'.$request->id.'/orginal');
+        Storage::disk('media')->makeDirectory($request->mode.'/'.$request->id.'/thump');
+        Storage::disk('media')->makeDirectory($request->mode.'/'.$request->id.'/medium');
         $fileName = $request->name.'.'.$request->file->extension();
-        $request->file->move(public_path('media').'/'.$request->mode.'/'.$request->id, $fileName);
+        $manager = new ImageManager();
+        $manager->make($request->file)->resize(300,null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save(public_path().'/media/'.$request->mode.'/'.$request->id.'/thump/'.$fileName);
+        $manager->make($request->file)->resize(600,null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->save(public_path().'/media/'.$request->mode.'/'.$request->id.'/medium/'.$fileName);
+        $manager->make($request->file)->save(public_path().'/media/'.$request->mode.'/'.$request->id.'/orginal/'.$fileName);
+
         return  $fileName.'?='.$rand;
 
     }
@@ -87,6 +99,11 @@ class fileupload extends Controller
      */
     public function destroy($id,Request $request)
     {
+        $myfile=explode('?',$request->file);
+
+        Storage::disk('media')->delete($request->mode.'/'.$request->id.'/medium/'.$myfile[0]);
+        Storage::disk('media')->delete($request->mode.'/'.$request->id.'/thump/'.$myfile[0]);
+        Storage::disk('media')->delete($request->mode.'/'.$request->id.'/orginal/'.$myfile[0]);
         return  $request->all();
     }
 }

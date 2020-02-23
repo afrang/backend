@@ -31,6 +31,13 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         Route::resource('ContactusController', 'Setting\ContactusController');
         /* Gallery */
         Route::resource('GalleryGroup', 'Gallery\gallerygroupcontroller');
+        Route::resource('GalleryDetail', 'Gallery\gallerydetilcontroller');
+        Route::get('GalleryDetailup/{id}', 'Gallery\gallerydetilcontroller@up');
+        /* Attribute */
+        Route::resource('Feature', 'Attr\FeatureController');
+        Route::resource('Featureitem', 'Attr\FeatureItemController');
+        Route::resource('ModelAttrController', 'Attr\ModelAttrController');
+
 
 
 

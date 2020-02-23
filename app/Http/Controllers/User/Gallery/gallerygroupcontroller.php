@@ -60,9 +60,9 @@ class gallerygroupcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,g_group $g_group)
     {
-        //
+        return $g_group->with('todetail')->where('id',$id)->first();
     }
 
     /**
@@ -99,6 +99,7 @@ class gallerygroupcontroller extends Controller
         $save               =$g_group->find($id);
         $save->name         =$request->name;
         $save->text         =$request->text;
+        $save->image         =$request->image;
         $save->urlname      =$request->urlname;
         $save->save();
 
