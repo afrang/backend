@@ -3,21 +3,15 @@
 namespace App\Http\Controllers\User\Attr;
 
 use App\Http\Controllers\Controller;
+use App\Model\Attr\attr_product;
 use App\Model\Attr\feature_attr;
-use App\Model\Attr\feature_model;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
-class FeatureController extends Controller
+class AttrController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(feature_attr $feature_attr)
+    public function index(attr_product $attr_product)
     {
-        return  $feature_attr->with('toOptions')->get();
+        return  $attr_product->with('toOptions')->get();
     }
 
     /**
@@ -36,14 +30,14 @@ class FeatureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,feature_attr $feature_attr)
+    public function store(Request $request,attr_product $feature_attr)
     {
 
         $request->validate([
             'name'=>[
                 'required',
             ]
-            ]);
+        ]);
         $save           =new $feature_attr;
         $save->name     =$request->name;
         $save->mode    =1;
@@ -58,7 +52,7 @@ class FeatureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id,feature_attr $feature_attr)
+    public function show($id,attr_product $feature_attr)
     {
         return  $feature_attr->with('toOptions')->where('id',$id)->first();
     }
@@ -81,7 +75,7 @@ class FeatureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id,feature_attr $feature_attr)
+    public function update(Request $request, $id,attr_product $feature_attr)
     {
         $request->validate([
             'name'=>[

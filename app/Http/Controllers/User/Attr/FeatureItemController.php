@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User\Attr;
 use App\Http\Controllers\Controller;
 use App\Model\Attr\feature_attr_option;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Psy\Util\Str;
 
 class FeatureItemController extends Controller
 {
@@ -84,12 +86,11 @@ class FeatureItemController extends Controller
                 'required',
             ]
         ]);
-        $save           = $attr_option->find($id);
-        $save->name     =$request->name;
-        $save->icon     =$request->icon;
-        $save->unit     =$request->unit;
-        $save->image     =$request->image;
-        $save->help     =$request->help;
+        $save               =$attr_option->find($id);
+        $save->name         =$request->name;
+        $save->icon         =$request->icon;
+        $save->image        =$request->image;
+        $save->help         =$request->help;
         $save->save();
         return  $save;
     }
@@ -100,8 +101,12 @@ class FeatureItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,feature_attr_option $attr_option)
     {
-        //
+        $del            =$attr_option->find($id);
+        Storage::disk('media')->deleteDirectory('featureitem/'.$id);
+       Storage::disk('filemanager')->deleteDirectory('featureitem/'.$id);
+       $del->delete();
+
     }
 }

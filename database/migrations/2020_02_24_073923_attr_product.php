@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class FeatureAttrs extends Migration
+class AttrProduct extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class FeatureAttrs extends Migration
      */
     public function up()
     {
-        Schema::create('feature_attrs', function (Blueprint $table) {
+        Schema::create('attr_products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('mode')->nullable();
             $table->string('name')->nullable();
@@ -33,6 +33,6 @@ class FeatureAttrs extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('feature_attrs');
+        Schema::dropIfExists('attr_products');
     }
 }

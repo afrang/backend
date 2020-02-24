@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class FeatureAttrs extends Migration
+class AttrProductOptions extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class FeatureAttrs extends Migration
      */
     public function up()
     {
-        Schema::create('feature_attrs', function (Blueprint $table) {
+        Schema::create('attr_product_options', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('mode')->nullable();
             $table->string('name')->nullable();
             $table->string('icon')->nullable();
-            $table->string('unit')->nullable();
             $table->string('image')->nullable();
             $table->text('help')->nullable();
-
+            $table->integer('parent');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ class FeatureAttrs extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('feature_attrs');
+        Schema::dropIfExists('attr_product_options');
     }
 }

@@ -1,62 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f79124ec-506c-4d57-b0f5-103e3c00255d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/FeatureController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/FeatureItemController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/ModelAttrController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Attr/feature_attr.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Attr/feature_attr_option.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Attr/feature_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_23_061139_p_attr_options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_23_061149_p_attrs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_23_080112_feature_attrs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_23_080139_feature_attr_options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_23_082918_feature_modesl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/featuremodel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/Public/1/medium/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/Public/1/orginal/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/Public/1/thump/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/featureitem/2/medium/thump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/featureitem/2/orginal/thump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/featureitem/2/thump/thump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/42/medium/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/42/orginal/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/42/thump/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/45/medium/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/45/orginal/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/45/thump/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/46/medium/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/46/orginal/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallery/46/thump/image.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/1/medium/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/1/orginal/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/1/thump/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/2/medium/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/2/orginal/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/2/thump/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/3/medium/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/3/orginal/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/3/thump/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/4/medium/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/4/orginal/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/gallerygroup/4/thump/thump.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/setting/1/medium/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/setting/1/orginal/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/setting/1/thump/logo.png" afterDir="false" />
+    <list default="true" id="f79124ec-506c-4d57-b0f5-103e3c00255d" name="Default Changelist" comment="Feature">
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/AttrController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/AttrItemController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Attr/attr_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Attr/attr_product_option.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_24_073923_attr_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_24_074132_attr_product_options.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/feature/1/1582526584.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/feature/1/1582526596.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/feature/1/medium/thump.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/feature/1/orginal/thump.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/feature/1/thump/thump.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Filemanager/fileupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Filemanager/fileupload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Gallery/gallerydetilcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Gallery/gallerydetilcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Gallery/gallerygroupcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Gallery/gallerygroupcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Setting/settingcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Setting/settingcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Gallery/g_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Gallery/g_group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_14_112250_sys_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_14_112250_sys_settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_20_092144_g_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_20_092144_g_details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/filemanager/GalleryGroup/1/1582198386.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Public/1/thump.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/FeatureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/FeatureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/FeatureItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/FeatureItemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attr/feature_attr.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Attr/feature_attr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_23_080112_feature_attrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_23_080112_feature_attrs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/featureitem/2/medium/thump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/featureitem/2/orginal/thump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/featureitem/2/thump/thump.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -290,6 +255,9 @@
       <workItem from="1582354020832" duration="10576000" />
       <workItem from="1582376109691" duration="1172000" />
       <workItem from="1582437960147" duration="12699000" />
+      <workItem from="1582462035838" duration="447000" />
+      <workItem from="1582468264628" duration="13000" />
+      <workItem from="1582524113617" duration="5981000" />
     </task>
     <task id="LOCAL-00001" summary="edit Artilce Fixed">
       <created>1581939988258</created>
@@ -340,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582232250178</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Feature">
+      <created>1582462140385</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582462140385</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,22 +327,23 @@
     <MESSAGE value="Tag Edit" />
     <MESSAGE value="Social Network Completed" />
     <MESSAGE value="Start Gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start Gallery" />
+    <MESSAGE value="Feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="5" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582051372321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="524" y="5" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1582051372321" />
-    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582449162565">
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582530390149">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/3840.0.1280.984@0.0.1536.824" timestamp="1581600016339" />
-    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582449162565" />
-    <state x="393" y="9" key="CommitChangelistDialog2" timestamp="1582232243195">
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582530390149" />
+    <state x="393" y="9" key="CommitChangelistDialog2" timestamp="1582462157897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582232243195" />
+    <state x="393" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582462157897" />
     <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1582353711602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -388,16 +364,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="746" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582288477015" />
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1582232259389">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1582462168175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582232259389" />
-    <state x="471" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1582462036609">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582462168175" />
+    <state x="471" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1582524116561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1366.697.1366.728@0.0.1536.824" timestamp="1581412466457" />
     <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/3840.0.1280.984@0.0.1536.824" timestamp="1581748518714" />
-    <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582462036609" />
+    <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582524116561" />
     <state x="422" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582439607916">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -406,12 +382,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="461" y="144" width="615" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1582449160386" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1582457293785">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1582530529881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1366.697.1366.728@0.0.1536.824" timestamp="1581415044005" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/3840.0.1280.984@0.0.1536.824" timestamp="1581599298340" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582457293785" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582530529881" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

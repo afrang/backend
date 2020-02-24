@@ -3,21 +3,21 @@
 namespace App\Http\Controllers\User\Attr;
 
 use App\Http\Controllers\Controller;
-use App\Model\Attr\feature_attr;
-use App\Model\Attr\feature_model;
+use App\Model\Attr\attr_product_option;
+use App\Model\Attr\feature_attr_option;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
 
-class FeatureController extends Controller
+class AttrItemController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(feature_attr $feature_attr)
+    public function index()
     {
-        return  $feature_attr->with('toOptions')->get();
+        //
     }
 
     /**
@@ -27,7 +27,7 @@ class FeatureController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,20 +36,18 @@ class FeatureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,feature_attr $feature_attr)
+    public function store(Request $request,attr_product_option $attr_option)
     {
-
         $request->validate([
             'name'=>[
                 'required',
             ]
-            ]);
-        $save           =new $feature_attr;
+        ]);
+        $save           =new $attr_option;
         $save->name     =$request->name;
-        $save->mode    =1;
+        $save->parent    =$request->parent;
         $save->save();
         return  $save;
-
     }
 
     /**
@@ -58,9 +56,9 @@ class FeatureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id,feature_attr $feature_attr)
+    public function show($id)
     {
-        return  $feature_attr->with('toOptions')->where('id',$id)->first();
+        //
     }
 
     /**
@@ -81,23 +79,20 @@ class FeatureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id,feature_attr $feature_attr)
+    public function update(Request $request, $id,attr_product_option $attr_option)
     {
         $request->validate([
             'name'=>[
                 'required',
             ]
         ]);
-        $save           = $feature_attr->find($id);
-        $save->name     =$request->name;
-        $save->mode     =$request->mode;
-        $save->icon     =$request->icon;
-        $save->unit     =$request->unit;
-        $save->image     =$request->image;
-        $save->help     =$request->help;
+        $save               =$attr_option->find($id);
+        $save->name         =$request->name;
+        $save->icon         =$request->icon;
+        $save->image        =$request->image;
+        $save->help         =$request->help;
         $save->save();
         return  $save;
-
     }
 
     /**
@@ -106,8 +101,12 @@ class FeatureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,attr_product_option $attr_option)
     {
-        //
+        $del            =$attr_option->find($id);
+        Storage::disk('media')->deleteDirectory('attrproduct/'.$id);
+        Storage::disk('filemanager')->deleteDirectory('attrproduct/'.$id);
+        $del->delete();
+
     }
 }
