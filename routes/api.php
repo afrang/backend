@@ -35,10 +35,13 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         Route::get('GalleryDetailup/{id}', 'Gallery\gallerydetilcontroller@up');
         /* Attribute */
         Route::resource('Feature', 'Attr\FeatureController');
-            Route::resource('Featureitem', 'Attr\FeatureItemController');
+        Route::resource('Featureitem', 'Attr\FeatureItemController');
         Route::resource('ModelAttrController', 'Attr\ModelAttrController');
-         Route::resource('Attrprodcut', 'Attr\AttrController');
+        Route::resource('Attrprodcut', 'Attr\AttrController');
         Route::resource('AttrProductitem', 'Attr\AttrItemController');
+        Route::resource('color', 'Attr\ColorController');
+        /* Product */
+        Route::resource('pgroup', 'Product\ProductGroupController');
 
 
 
