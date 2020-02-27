@@ -24,6 +24,7 @@ class PGroup extends Migration
             $table->longText('text')->nullable();
             $table->longText('seotext')->nullable();
             $table->string('icon')->nullable();
+            $table->integer('orders')->nullable();
             $table->string('thump')->nullable();
             $table->string('title')->nullable();
             $table->timestamps();

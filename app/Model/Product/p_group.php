@@ -18,4 +18,7 @@ class p_group extends Model
     function toAttr(){
         return $this->belongsToMany('App\Model\Attr\attr_product','p_attr_group_attribute','attr','group');
     }
+    function toSub(){
+        return $this->hasMany('App\Model\Product\p_group','sub','id');
+    }
 }

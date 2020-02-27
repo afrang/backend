@@ -33,6 +33,7 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         Route::resource('GalleryGroup', 'Gallery\gallerygroupcontroller');
         Route::resource('GalleryDetail', 'Gallery\gallerydetilcontroller');
         Route::get('GalleryDetailup/{id}', 'Gallery\gallerydetilcontroller@up');
+        Route::get('GalleryDetaildown/{id}', 'Gallery\gallerydetilcontroller@down');
         /* Attribute */
         Route::resource('Feature', 'Attr\FeatureController');
         Route::resource('Featureitem', 'Attr\FeatureItemController');
@@ -42,6 +43,8 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         Route::resource('color', 'Attr\ColorController');
         /* Product */
         Route::resource('pgroup', 'Product\ProductGroupController');
+        Route::get('pgroupDetailup/{id}', 'Product\ProductGroupController@up');
+        Route::get('pgroupDetaildown/{id}', 'Product\ProductGroupController@down');
 
 
 
