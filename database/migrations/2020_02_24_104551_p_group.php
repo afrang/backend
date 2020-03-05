@@ -27,6 +27,13 @@ class PGroup extends Migration
             $table->integer('orders')->nullable();
             $table->string('thump')->nullable();
             $table->string('title')->nullable();
+            $table->integer('pricemode')->default(1);
+            $table->integer('minwidth')->default(1);
+            $table->integer('maxheight')->default(10);
+            $table->integer('minheight')->default(10);
+            $table->integer('maxwidth')->default(50);
+            $table->integer('arealimit')->nullable();
+            $table->text('areaerror')->nullable();
             $table->timestamps();
         });
     }

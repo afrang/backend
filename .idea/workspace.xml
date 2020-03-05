@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f79124ec-506c-4d57-b0f5-103e3c00255d" name="Default Changelist" comment="Product Group">
-      <change afterPath="$PROJECT_DIR$/app/Rules/CheckSubset.php" afterDir="false" />
+    <list default="true" id="f79124ec-506c-4d57-b0f5-103e3c00255d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductAttrController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductDetailController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductImageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductPriceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProductListResourceTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Product/p_attr_value.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Product/p_image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Product/p_price.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Product/p_prodcut.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_27_105748_p_prodcuts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_27_105853_p_prices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_27_105920_p_images.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_084719_p_attrvalues.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_124057_p_attr_option_value.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/GroupProduct/16/1582920728.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Product/1/1583226936.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/GroupProduct/16/medium/r6jwc4zqhdljkaz4vzb2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/GroupProduct/16/orginal/r6jwc4zqhdljkaz4vzb2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/GroupProduct/16/thump/r6jwc4zqhdljkaz4vzb2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/medium/0n8v85nzyl6df94tfu2k.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/medium/jymw5q9vu6drix615nj3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/medium/tjv3s3gvpnlcf5edxr8q.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/orginal/0n8v85nzyl6df94tfu2k.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/orginal/jymw5q9vu6drix615nj3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/orginal/tjv3s3gvpnlcf5edxr8q.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/thump/0n8v85nzyl6df94tfu2k.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/thump/jymw5q9vu6drix615nj3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/thump/tjv3s3gvpnlcf5edxr8q.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/ColorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Attr/ColorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Filemanager/fileupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Filemanager/fileupload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductGroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductGroupController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Product/p_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product/p_group.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_24_104551_p_group.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_24_104551_p_group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/filemanager/GroupProduct/1/1582706925.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/Attrprodcut/1/medium/thump.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/Attrprodcut/1/orginal/thump.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/Attrprodcut/1/thump/thump.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/GroupProduct/1/medium/thump.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/GroupProduct/1/orginal/thump.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/GroupProduct/1/thump/thump.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +284,16 @@
       <workItem from="1582696254417" duration="14010000" />
       <workItem from="1582718906517" duration="1169000" />
       <workItem from="1582723185152" duration="184000" />
-      <workItem from="1582786127580" duration="8455000" />
+      <workItem from="1582786127580" duration="15017000" />
+      <workItem from="1582898493014" duration="5886000" />
+      <workItem from="1582955999996" duration="2074000" />
+      <workItem from="1582963037486" duration="900000" />
+      <workItem from="1583163218202" duration="7185000" />
+      <workItem from="1583222855808" duration="6264000" />
+      <workItem from="1583253042240" duration="5320000" />
+      <workItem from="1583265253214" duration="2170000" />
+      <workItem from="1583302534168" duration="5109000" />
+      <workItem from="1583324356402" duration="2179000" />
     </task>
     <task id="LOCAL-00001" summary="edit Artilce Fixed">
       <created>1581939988258</created>
@@ -321,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582723212205</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Product Detail Start">
+      <created>1582799929242</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582799929242</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,22 +387,23 @@
     <MESSAGE value="Feature" />
     <MESSAGE value="Feature an attrproduvt completed" />
     <MESSAGE value="Product Group" />
-    <option name="LAST_COMMIT_MESSAGE" value="Product Group" />
+    <MESSAGE value="Product Detail Start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Product Detail Start" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="5" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582051372321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="524" y="5" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1582051372321" />
-    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582799333490">
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582957950424">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/3840.0.1280.984@0.0.1536.824" timestamp="1581600016339" />
-    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582799333490" />
-    <state x="393" y="9" key="CommitChangelistDialog2" timestamp="1582723244597">
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582957950424" />
+    <state x="393" y="9" key="CommitChangelistDialog2" timestamp="1582799925589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582723244597" />
+    <state x="393" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582799925589" />
     <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1582720762290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -372,34 +424,40 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="746" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582288477015" />
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1582799913791">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1582800780770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582799913791" />
-    <state x="471" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1582718908691">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582800780770" />
+    <state x="471" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1583386171847">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1366.697.1366.728@0.0.1536.824" timestamp="1581412466457" />
     <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/3840.0.1280.984@0.0.1536.824" timestamp="1581748518714" />
-    <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582718908691" />
-    <state x="422" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582439607916">
+    <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583302549892" />
+    <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824/3840.172.1280.984@0.0.1536.824" timestamp="1583223038739" />
+    <state x="471" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583386171847" />
+    <state x="422" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583306966992">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="422" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583306966992" />
     <state x="422" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1582439607916" />
-    <state x="461" y="144" width="615" height="536" key="find.popup" timestamp="1582794939391">
+    <state x="461" y="144" width="615" height="536" key="find.popup" timestamp="1583226814040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="461" y="144" width="615" height="536" key="find.popup/0.0.1536.824/3840.172.1280.984@0.0.1536.824" timestamp="1583226814040" />
     <state x="461" y="144" width="615" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1582794939391" />
-    <state x="426" y="188" key="run.anything.popup" timestamp="1582794914220">
+    <state x="426" y="188" key="run.anything.popup" timestamp="1582803291980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="426" y="188" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1582794914220" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1582795353893">
+    <state x="426" y="188" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1582803291980" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583313285837">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1366.697.1366.728@0.0.1536.824" timestamp="1581415044005" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1366.697.1366.728@0.0.1536.824" timestamp="1583254579771" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/3840.0.1280.984@0.0.1536.824" timestamp="1581599298340" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582795353893" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583313285837" />
+    <state x="4199" y="345" width="672" height="810" key="search.everywhere.popup/0.0.1536.824/3840.172.1280.984@3840.172.1280.984" timestamp="1583230126464" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582957866445" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

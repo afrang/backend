@@ -37,6 +37,10 @@ class fileupload extends Controller
      */
     public function store(Request $request)
     {
+       if($request->name=='random'){
+           $request->name=substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz", 20)), 0, 20);
+
+       }
         $rand=rand(1000,9999);
          Storage::disk('media')->makeDirectory($request->mode);
         Storage::disk('media')->makeDirectory($request->mode.'/'.$request->id);

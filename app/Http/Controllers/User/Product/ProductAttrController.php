@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\User\Attr;
+namespace App\Http\Controllers\User\Product;
 
 use App\Http\Controllers\Controller;
-use App\Model\Attr\p_color;
+use App\Model\Product\p_attr_value;
 use Illuminate\Http\Request;
 
-class ColorController extends Controller
+class ProductAttrController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(p_color $color)
+    public function index()
     {
-        return  $color->get();
+        //
     }
 
     /**
@@ -34,16 +34,12 @@ class ColorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,p_color $color)
+    public function store(Request $request,p_attr_value $attr_value)
     {
-        $request->validate([
-           'name'=>'required',
-           'code'=>'required'
-        ]);
-        $save       =new $color;
-        $save->name=    $request->name;
-        $save->code=    $request->code;
-        $save->save();
+        $attr_value->updateOrCreate(
+            ['product'=>$request->product,'attr'=>$request->id],
+            ['value'=>$request->value]
+        );
     }
 
     /**
@@ -63,9 +59,9 @@ class ColorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,p_color $color)
+    public function edit($id)
     {
-
+        //
     }
 
     /**
@@ -75,13 +71,9 @@ class ColorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id,Request $request)
+    public function update(Request $request, $id)
     {
-
-        $save       = p_color::find($id);
-        $save->name=    $request->name;
-        $save->code=    $request->code;
-        $save->save();
+        //
     }
 
     /**
@@ -92,9 +84,6 @@ class ColorController extends Controller
      */
     public function destroy($id)
     {
-
-        $del= p_color::find($id);
-
-        $del->delete();
+        //
     }
 }

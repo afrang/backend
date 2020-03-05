@@ -31,9 +31,9 @@ class ProductGroupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(p_group $group)
     {
-        //
+      return  $group->where('sub',0)->with('toSub')->orderBy('orders')->get();
     }
 
     /**
@@ -94,6 +94,7 @@ class ProductGroupController extends Controller
      */
     public function update($id,Request $request, p_group $p_group)
     {
+
         $request->validate([
             'url'=>[
                 'required',
@@ -115,6 +116,13 @@ class ProductGroupController extends Controller
         $save->thump            =$request->thump;
         $save->icon             =$request->icon;
         $save->title            =$request->title;
+        $save->pricemode        =$request->pricemode;
+        $save->minwidth         =$request->minwidth;
+        $save->maxwidth         =$request->maxwidth;
+        $save->minheight        =$request->minheight;
+        $save->maxheight        =$request->maxheight;
+        $save->arealimit        =$request->arealimit;
+        $save->areaerror        =$request->areaerror;
         $save->save();
         self::tagmanager($save->id,$request->tag);
 

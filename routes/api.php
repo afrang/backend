@@ -45,6 +45,11 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
         Route::resource('pgroup', 'Product\ProductGroupController');
         Route::get('pgroupDetailup/{id}', 'Product\ProductGroupController@up');
         Route::get('pgroupDetaildown/{id}', 'Product\ProductGroupController@down');
+        /* Product Detail */
+         Route::resource('pdetail', 'Product\ProductDetailController');
+         Route::resource('pimage', 'Product\ProductImageController');
+         Route::resource('pprice', 'Product\ProductPriceController');
+         Route::resource('pattr', 'Product\ProductAttrController');
 
 
 
