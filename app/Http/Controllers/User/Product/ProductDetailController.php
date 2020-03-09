@@ -70,7 +70,8 @@ class ProductDetailController extends Controller
           'toGroup.toTags',
           'toGroup.toAttr.toOptions',
           'toImage',
-          'toAttr'
+          'toPrice',
+          'toAttr.toOptionValue'
             )->first();
     }
 

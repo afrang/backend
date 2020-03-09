@@ -15,4 +15,11 @@ class p_prodcut extends Model
    function toAttr(){
        return $this->hasMany(p_attr_value::class,'product','id');
    }
+   function toFeature(){
+
+   }
+   function toPrice(){
+       return $this->hasMany(p_price::class,'parent','id');
+   }
+
 }

@@ -36,6 +36,7 @@ class ProductAttrController extends Controller
      */
     public function store(Request $request,p_attr_value $attr_value)
     {
+
         $attr_value->updateOrCreate(
             ['product'=>$request->product,'attr'=>$request->id],
             ['value'=>$request->value]

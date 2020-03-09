@@ -3,18 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e77e3be8-5c69-4a97-bb6d-29cd85982b6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/.rnd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductAttrController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductAttrController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductDetailController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attr/attr_product_option.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Attr/attr_product_option.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Product/p_attr_value.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product/p_attr_value.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Product/p_prodcut.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product/p_prodcut.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
@@ -27,39 +22,9 @@
       <change beforePath="$PROJECT_DIR$/config/passport.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql Session.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/passport/AuthorizedClients.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/passport/Clients.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/passport/PersonalAccessTokens.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_124057_p_attr_option_value.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_124057_p_attr_option_value.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/filemanager/Product/1/1583226936.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +151,9 @@
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/bcmath_compat" />
+      <path value="$PROJECT_DIR$/vendor/moontoast/math" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Yhd7en7YBzidJJ4DyyGyEy2O1F" />
@@ -219,28 +187,55 @@
       <updated>1583398593913</updated>
       <workItem from="1583398596051" duration="2319000" />
       <workItem from="1583404223431" duration="1321000" />
+      <workItem from="1583405563898" duration="1305000" />
+      <workItem from="1583482041353" duration="8657000" />
+      <workItem from="1583583987704" duration="604000" />
+      <workItem from="1583654931206" duration="602000" />
+      <workItem from="1583675700935" duration="4641000" />
+      <workItem from="1583737011977" duration="313000" />
     </task>
+    <task id="LOCAL-00001" summary="laravel 7">
+      <created>1583405614124</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583405614124</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="laravel 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="laravel 7" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="393" y="11" key="CommitChangelistDialog2" timestamp="1583405478856">
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583517267193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="11" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405478856" />
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583517267193" />
+    <state x="393" y="11" key="CommitChangelistDialog2" timestamp="1583405607191">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="11" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405607191" />
     <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1583405348704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="169" key="FileChooserDialogImpl/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405348704" />
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1583405462216">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1583405617480">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405462215" />
-    <state x="467" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1583405564117">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405617480" />
+    <state x="467" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1583737014125">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405564117" />
+    <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583737014125" />
+    <state x="426" y="67" width="672" height="676" key="search.everywhere.popup" timestamp="1583683508033">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="67" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583683508033" />
   </component>
 </project>

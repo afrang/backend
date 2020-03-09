@@ -18,6 +18,7 @@ class PAttrOptionValue extends Migration
             $table->integer('parent');
             $table->integer('value')->nullable();
             $table->integer('price')->nullable();
+            $table->integer('attr')->nullable();
             $table->timestamps();
         });
     }

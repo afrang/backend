@@ -49,8 +49,9 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
     /* Product Detail */
     Route::resource('pdetail', 'Product\ProductDetailController');
     Route::resource('pimage', 'Product\ProductImageController');
-    Route::resource('pprice', 'Product\ProductPriceController');
     Route::resource('pattr', 'Product\ProductAttrController');
+    Route::resource('popt', 'Product\ProdcutOptionController');
+    Route::resource('pprice', 'Product\ProductPriceController');
 
 
 
