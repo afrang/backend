@@ -18,7 +18,7 @@ class ProductDetailController extends Controller
     public function index(Request $request,p_prodcut $p_prodcut)
     {
 
-        return  ProductListResourceTable::collection($p_prodcut->with('toGroup')->paginate(10));
+        return  ProductListResourceTable::collection($p_prodcut->with('toGroup')->paginate(1));
     }
 
     /**
@@ -26,10 +26,9 @@ class ProductDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(p_prodcut $p_prodcut)
+    public function create()
     {
-        return  $p_prodcut->with('toGroup')->get();
-
+        //
     }
 
     /**
@@ -71,8 +70,7 @@ class ProductDetailController extends Controller
           'toGroup.toTags',
           'toGroup.toAttr.toOptions',
           'toImage',
-          'toPrice',
-          'toAttr.toOptionValue'
+          'toAttr'
             )->first();
     }
 

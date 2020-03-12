@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
+Route::prefix('')->namespace('View')->group(function (){
+        Route::resource('/slider','Tools\GalleryViewController');
+        Route::resource('/setting','Tools\SettingpageController');
+
+        /* Group */
+        Route::resource('/pgroup','Product\ProductGroupControllerViewController');
+});
 Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function () {
     Route::resource('profile', 'Profile\UserController');
     Route::resource('Joblist', 'Profile\JoblistController');
@@ -30,6 +37,7 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
     /* Setting */
     Route::resource('SettingController', 'Setting\settingcontroller');
     Route::resource('ContactusController', 'Setting\ContactusController');
+    Route::resource('FirstPageSetting', 'Setting\SpecialPageController');
     /* Gallery */
     Route::resource('GalleryGroup', 'Gallery\gallerygroupcontroller');
     Route::resource('GalleryDetail', 'Gallery\gallerydetilcontroller');

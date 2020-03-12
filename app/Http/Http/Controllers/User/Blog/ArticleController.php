@@ -23,6 +23,7 @@ class ArticleController extends Controller
      */
     public function index(Request $request,b_article $b_article)
     {
+        return  $b_article->get();
 
        return BlogArticleResource::collection($b_article->where('group',$request->group)->where('name','like','%'.$request->search.'%')->with('totags')->paginate(10));
     }
@@ -32,9 +33,10 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(b_article $b_article)
+    public function create()
     {
-        return  $b_article->with('toArticle')->get();
+
+        return BlogArticleResource::collection(b_article::get());
     }
 
     /**
