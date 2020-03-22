@@ -1,21 +1,32 @@
 <?php
 
-namespace App\Http\Controllers\User\Product;
+namespace App\Http\Controllers\View\Product;
 
 use App\Http\Controllers\Controller;
-use App\Model\Product\p_price;
+use App\Http\Resources\ProdcutThumpnailResource;
+use App\Model\Product\p_prodcut;
 use Illuminate\Http\Request;
+use mysql_xdevapi\Collection;
 
-class ProductPriceController extends Controller
+class ProductSearchControllerView extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request,p_prodcut $p_prodcut)
     {
-        //
+        $list=null;
+        if(isset($request->tag)){
+            $list=$p_prodcut->whereHas('toTag',function ($uqery) use($request){
+                $uqery->where('product',$request->tag);
+            });
+
+
+        }
+      // return  $list->with('toGroup','toPrice','toImage')->get();
+        return  ProdcutThumpnailResource::collection($list->with('toGroup','toPrice','toImage')->get());
     }
 
     /**
@@ -34,12 +45,9 @@ class ProductPriceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,p_price $p_price)
+    public function store(Request $request)
     {
-        $p_price->updateOrCreate(
-            ['parent'=>$request->id],
-            ['price'=>$request->price,'discount'=>$request->discount,'percent'=>$request->percent,'attr'=>$request->attr]
-        );
+        //
     }
 
     /**
@@ -48,9 +56,10 @@ class ProductPriceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,p_prodcut $p_prodcut)
     {
-        //
+        return  ProdcutThumpnailResource::make($p_prodcut->where('id',$id)->with('toGroup','toPrice','toImage')->first());
+
     }
 
     /**

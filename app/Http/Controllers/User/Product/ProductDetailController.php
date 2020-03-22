@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User\Product;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductListResourceTable;
 use App\Model\Product\p_prodcut;
+use App\Model\Tags\tag;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -28,7 +29,7 @@ class ProductDetailController extends Controller
      */
     public function create(p_prodcut $p_prodcut)
     {
-        return  $p_prodcut->with('toGroup')->get();
+        return  $p_prodcut->with('toGroup','toTag')->get();
 
     }
 
@@ -72,6 +73,7 @@ class ProductDetailController extends Controller
           'toGroup.toAttr.toOptions',
           'toImage',
           'toPrice',
+          'toTag',
           'toAttr.toOptionValue'
             )->first();
     }
@@ -121,10 +123,35 @@ class ProductDetailController extends Controller
         $save->installation         =$request->installation;
         $save->discount             =$request->discount;
         $save->expressdelivery      =$request->expressdelivery;
+
         $save->save();
+        self::tagmanager($save->id,$request->tag);
        // return  $save;
     }
+    private function tagmanager($id,$tags){
+        $tags=json_decode($tags);
+        $array=[];
 
+        foreach($tags as $key){
+            if(isset($key->text)){
+                array_push($array,$key->text);
+
+            }else{
+                array_push($array,$key);
+            }
+        }
+        $group=new p_prodcut();
+        $group=$group->find($id);
+        $sync=array();
+        foreach($array as $key){
+            $tag= tag::firstOrCreate(['name'=>$key]);
+            array_push($sync,$tag->id);
+        }
+        $group->toTag()->sync($sync);
+
+
+
+    }
     /**
      * Remove the specified resource from storage.
      *

@@ -19,6 +19,7 @@ class ProductListResourceTable extends JsonResource
             'name'=>$this->name,
             'id'=>$this->id,
             'url'=>$this->url,
+            'model'=>$this->model,
             'group'=>$this->toGroup->name,
             'idgroup'=>$this->toGroup->id,
 

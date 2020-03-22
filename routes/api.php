@@ -16,9 +16,16 @@ Auth::routes();
 Route::prefix('')->namespace('View')->group(function (){
         Route::resource('/slider','Tools\GalleryViewController');
         Route::resource('/setting','Tools\SettingpageController');
+        Route::resource('/firstpage','Pages\FirstpageController');
 
         /* Group */
         Route::resource('/pgroup','Product\ProductGroupControllerViewController');
+        Route::resource('/psearch','Product\ProductGroupControllerViewController');
+
+        /* Product */
+       Route::resource('/searchproduct','Product\ProductSearchControllerView');
+
+
 });
 Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function () {
     Route::resource('profile', 'Profile\UserController');

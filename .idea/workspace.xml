@@ -1,57 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e77e3be8-5c69-4a97-bb6d-29cd85982b6c" name="Default Changelist" comment="Start First page View">
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Auth/loginPassport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/AuthenticationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/Sys/sys_setting_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Attr/AttrController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Attr/AttrItemController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Attr/ColorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Attr/FeatureController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Attr/FeatureItemController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Attr/ModelAttrController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Blog/ArticleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Blog/GroupController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Filemanager/UploadController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Filemanager/fileupload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Gallery/gallerydetilcontroller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Gallery/gallerygroupcontroller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Product/ProductAttrController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Product/ProductDetailController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Product/ProductGroupController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Product/ProductImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Product/ProductPriceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Profile/JoblistController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Profile/RolesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Profile/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Profile/UsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Setting/ContactusController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Setting/settingcontroller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Tag/TagController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Resources/Blog/BlogArticleResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Resources/Blog/BlogGroupResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Http/Resources/ProductListResourceTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+    <list default="true" id="e77e3be8-5c69-4a97-bb6d-29cd85982b6c" name="Default Changelist" comment="Start First Setting Completed">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/boomco.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/View/Product/ProductSearchControllerView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProdcutThumpnailResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_21_063452_p_attr_pdetail_tags.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/1/1584598241.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/1/1584598390.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/1/1584598391.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/1/1584598392.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602877.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602879.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602880.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602881.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602882.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602883.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602884.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/10/1584602885.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/4/1584822585.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/4/1584823304.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/5/1584822404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Blog/5/1584862871.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filemanager/Product/1/1584822072.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Articles/10/mini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Articles/10/orginal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Articles/10/thump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Articles/7/mini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Articles/7/orginal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Articles/7/thump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/medium/lgv2jwt1t2zypeold913.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/orginal/lgv2jwt1t2zypeold913.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/Product/16/thump/lgv2jwt1t2zypeold913.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Blog/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Blog/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductDetailController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductPriceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Product/ProductPriceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Product/ProductPriceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Http/Controllers/User/Product/ProductPriceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Http/Resources/ProductListResourceTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Http/Resources/ProductListResourceTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductListResourceTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ProductListResourceTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Product/p_price.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product/p_price.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Product/p_prodcut.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product/p_prodcut.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
@@ -62,24 +52,6 @@
       <change beforePath="$PROJECT_DIR$/config/passport.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/medium/0n8v85nzyl6df94tfu2k.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/medium/jymw5q9vu6drix615nj3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/medium/tjv3s3gvpnlcf5edxr8q.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/orginal/0n8v85nzyl6df94tfu2k.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/orginal/jymw5q9vu6drix615nj3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/orginal/tjv3s3gvpnlcf5edxr8q.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/thump/0n8v85nzyl6df94tfu2k.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/thump/jymw5q9vu6drix615nj3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/Product/16/thump/tjv3s3gvpnlcf5edxr8q.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/gallerygroup/1/medium/thump.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/gallerygroup/1/medium/thump.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/gallerygroup/1/orginal/thump.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/gallerygroup/1/orginal/thump.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/gallerygroup/1/thump/thump.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/gallerygroup/1/thump/thump.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/gallerygroup/2/medium/thump.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/gallerygroup/2/medium/thump.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/gallerygroup/2/orginal/thump.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/gallerygroup/2/orginal/thump.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/gallerygroup/2/thump/thump.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/gallerygroup/2/thump/thump.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/setting/1/medium/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/setting/1/medium/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/setting/1/orginal/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/setting/1/orginal/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/setting/1/thump/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/setting/1/thump/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +64,36 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="newyuta: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -216,16 +218,21 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Yhd7en7YBzidJJ4DyyGyEy2O1F" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -261,7 +268,20 @@
       <workItem from="1583951544783" duration="718000" />
       <workItem from="1583954685227" duration="5654000" />
       <workItem from="1583995333320" duration="24000" />
-      <workItem from="1583999405880" duration="3238000" />
+      <workItem from="1583999405880" duration="3932000" />
+      <workItem from="1584027251779" duration="43000" />
+      <workItem from="1584086628696" duration="446000" />
+      <workItem from="1584174272966" duration="135000" />
+      <workItem from="1584447251995" duration="1190000" />
+      <workItem from="1584512971947" duration="4845000" />
+      <workItem from="1584545061585" duration="2168000" />
+      <workItem from="1584597084704" duration="1318000" />
+      <workItem from="1584681388960" duration="918000" />
+      <workItem from="1584696423065" duration="4416000" />
+      <workItem from="1584811151650" duration="4696000" />
+      <workItem from="1584859174478" duration="2379000" />
+      <workItem from="1584870333157" duration="4134000" />
+      <workItem from="1584901847284" duration="1994000" />
     </task>
     <task id="LOCAL-00001" summary="laravel 7">
       <created>1583405614124</created>
@@ -283,42 +303,75 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="laravel 7" />
     <MESSAGE value="Start First page View" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start First page View" />
+    <MESSAGE value="Start First Setting Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start First Setting Completed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583517267193">
+    <state x="362" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584522719266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="362" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1280.453.1280.984@0.0.1536.824" timestamp="1584522719266" />
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584773048475">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-1366.609.1366.728@0.0.1536.824" timestamp="1584773048475" />
     <state x="500" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583517267193" />
-    <state x="393" y="11" key="CommitChangelistDialog2" timestamp="1583738334978">
+    <state x="393" y="11" key="CommitChangelistDialog2" timestamp="1584003691682">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="393" y="11" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583738334978" />
-    <state x="393" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583737354799" />
-    <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1583405348704">
+    <state x="393" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584003691682" />
+    <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1584027293175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="169" key="FileChooserDialogImpl/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405348704" />
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1583737373900">
+    <state x="550" y="169" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584027293175" />
+    <state width="200" height="457" key="HiddenNamespacesPopup" timestamp="1584522742248">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="200" height="457" key="HiddenNamespacesPopup/0.0.1536.824/-1280.453.1280.984@0.0.1536.824" timestamp="1584522742248" />
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1584003699593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583405617480" />
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583737373900" />
-    <state x="467" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1583999764149">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584003699593" />
+    <state x="467" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1584901853055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1366.609.1366.728@0.0.1536.824" timestamp="1584901853055" />
     <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583905339693" />
-    <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583999764149" />
-    <state x="462" y="144" width="613" height="536" key="find.popup" timestamp="1583955410121">
+    <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584870351819" />
+    <state x="462" y="144" width="615" height="536" key="find.popup" timestamp="1584813157819">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="462" y="144" width="615" height="536" key="find.popup/0.0.1536.824/-1366.609.1366.728@0.0.1536.824" timestamp="1584813157819" />
     <state x="462" y="144" width="613" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1583955410121" />
-    <state x="426" y="67" width="672" height="676" key="search.everywhere.popup" timestamp="1583957845786">
+    <state x="426" y="188" key="run.anything.popup" timestamp="1584774960482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="426" y="188" key="run.anything.popup/0.0.1536.824/-1366.609.1366.728@0.0.1536.824" timestamp="1584774960482" />
+    <state x="426" y="67" width="672" height="676" key="search.everywhere.popup" timestamp="1584912315961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="67" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/-1280.453.1280.984@0.0.1536.824" timestamp="1584527618536" />
+    <state x="426" y="67" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/-1366.609.1366.728@0.0.1536.824" timestamp="1584912315961" />
     <state x="426" y="67" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/3840.0.1680.1010@0.0.1536.824" timestamp="1583918849612" />
     <state x="426" y="67" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583957845786" />
   </component>

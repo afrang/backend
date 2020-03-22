@@ -37,7 +37,7 @@ class ProductPriceController extends Controller
      */
     public function store(Request $request,p_price $p_price)
     {
-        return  $request->json();
+        return  'fgdf';
     }
 
     /**

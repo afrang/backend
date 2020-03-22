@@ -2,10 +2,14 @@
 
 namespace App\Model\Product;
 
+use App\Model\Tags\tag;
 use Illuminate\Database\Eloquent\Model;
 
 class p_prodcut extends Model
 {
+    function toTag(){
+        return $this->belongsToMany(tag::class,'p_attr_pdetail_tags','tag','product');
+    }
    function toGroup(){
        return $this->hasOne(p_group::class,'id','parent');
    }
