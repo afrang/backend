@@ -66,6 +66,7 @@ class ArticleController extends Controller
         $save->text= $request->text;
         $save->url= $request->url;
         $save->keywords= $request->keywords;
+        $save->title= $request->title;
         $save->group= $request->groups;
         $save->description= $request->description;
         $save->save();
@@ -161,6 +162,7 @@ class ArticleController extends Controller
         $save->name= $request->name;
         $save->publish= 1;
         $save->text= $request->text;
+        $save->title= $request->title;
         $save->url= $request->url;
         $save->keywords= $request->keywords;
         $save->description= $request->description;

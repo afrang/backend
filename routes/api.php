@@ -17,10 +17,14 @@ Route::prefix('')->namespace('View')->group(function (){
         Route::resource('/slider','Tools\GalleryViewController');
         Route::resource('/setting','Tools\SettingpageController');
         Route::resource('/firstpage','Pages\FirstpageController');
+        Route::resource('/contactus','Tools\ContactInfoController');
 
         /* Group */
         Route::resource('/pgroup','Product\ProductGroupControllerViewController');
         Route::resource('/psearch','Product\ProductGroupControllerViewController');
+        /* Blog */
+        Route::resource('/article','Blog\BlogArticle');
+        Route::resource('/blog','Blog\BlogGroup');
 
         /* Product */
        Route::resource('/searchproduct','Product\ProductSearchControllerView');
