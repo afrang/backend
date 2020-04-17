@@ -71,9 +71,13 @@ class ProductPriceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,p_price $p_price)
     {
-        //
+        $save=  $p_price->find($id);
+        $save->price=$request->price;
+        $save->discount=$request->discount;
+        $save->percent=$request->percent;
+        $save->save();
     }
 
     /**

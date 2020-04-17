@@ -88,13 +88,14 @@ class FeatureController extends Controller
                 'required',
             ]
         ]);
-        $save           = $feature_attr->find($id);
-        $save->name     =$request->name;
-        $save->mode     =$request->mode;
-        $save->icon     =$request->icon;
-        $save->unit     =$request->unit;
-        $save->image     =$request->image;
-        $save->help     =$request->help;
+        $save                   = $feature_attr->find($id);
+        $save->name             =$request->name;
+        $save->mode             =$request->mode;
+        $save->icon             =$request->icon;
+        $save->unit             =$request->unit;
+        $save->image            =$request->image;
+        $save->filtered         =$request->filtered;
+        $save->help             =$request->help;
         $save->save();
         return  $save;
 

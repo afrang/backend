@@ -19,6 +19,7 @@ class FeatureAttrs extends Migration
             $table->string('name')->nullable();
             $table->string('icon')->nullable();
             $table->string('unit')->nullable();
+            $table->string('unit')->nullable();
             $table->string('image')->nullable();
             $table->text('help')->nullable();
 

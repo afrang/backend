@@ -15,7 +15,7 @@ class ProductAttrController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -48,9 +48,9 @@ class ProductAttrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,p_attr_value $attr_value)
     {
-        //
+        return  $attr_value->where('product',$id)->with('toAttr')->get();
     }
 
     /**

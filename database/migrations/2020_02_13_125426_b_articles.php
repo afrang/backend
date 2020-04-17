@@ -20,6 +20,7 @@ class BArticles extends Migration
             $table->string('image')->nullable();
             $table->boolean('publish')->default(1);
             $table->longText('text')->nullable();
+            $table->longText('title')->nullable();
             $table->text('keywords')->nullable();
             $table->text('description')->nullable();
             $table->text('tag')->nullable();

@@ -86,9 +86,11 @@ class AttrController extends Controller
         $save->name     =$request->name;
         $save->mode     =$request->mode;
         $save->icon     =$request->icon;
+        $save->filtered     =$request->filtered;
         $save->unit     =$request->unit;
         $save->image     =$request->image;
         $save->help     =$request->help;
+        $save->pricemode         =$request->pricemode;
         $save->save();
         return  $save;
 

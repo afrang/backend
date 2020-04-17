@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\User\Product;
 
 use App\Http\Controllers\Controller;
+use App\Model\Product\p_attr_option_value;
 use App\Model\Product\p_attr_value;
+use App\Model\Product\p_price;
 use Illuminate\Http\Request;
 
 class ProductAttrController extends Controller
@@ -49,9 +51,10 @@ class ProductAttrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,p_attr_value $attr_value)
     {
-        //
+        return  $attr_value->where('product',$id)->with('toAttr.toOptions','toOptionValue.toPrice')->get();
+
     }
 
     /**
@@ -83,8 +86,21 @@ class ProductAttrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,p_attr_value $attr_value,p_price $p_price,p_attr_option_value $attr_option_value)
     {
-        //
+
+        $delmaster=$attr_value->where('id',$id)->with('toOptionValue.toPrice')->first();
+        if($delmaster->toOptionValue) {
+
+            foreach ($delmaster->toOptionValue as $key) {
+                if ($key->to_price) {
+                    foreach ($key->to_price as $m) {
+                        $p_price->where('id', $m->id)->delete();
+                    }
+                };
+                $attr_option_value->where('id', $key->id)->delete();
+            }
+        }
+        $delmaster->delete();
     }
 }

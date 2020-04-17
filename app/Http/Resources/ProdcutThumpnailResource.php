@@ -25,8 +25,10 @@ class ProdcutThumpnailResource extends JsonResource
             'idgroup'=>$this->toGroup->id,
             'price'=>$price['price'],
             'discount'=>$price['discount'],
+            'status'=>$this->status,
             'percent'=>$price['percent'],
             'image'=>$image['file'],
+            'color'=>$this->toColor()->with('toColor')->get()
         ];
     }
 }

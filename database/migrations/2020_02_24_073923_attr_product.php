@@ -18,9 +18,11 @@ class AttrProduct extends Migration
             $table->integer('mode')->nullable();
             $table->string('name')->nullable();
             $table->string('icon')->nullable();
+            $table->string('pricemode')->default(0);
             $table->string('unit')->nullable();
             $table->string('image')->nullable();
             $table->text('help')->nullable();
+            $table->boolean('filtered')->default(false);
 
             $table->timestamps();
         });

@@ -16,14 +16,18 @@ class p_prodcut extends Model
    function toImage(){
        return $this->hasMany(p_image::class,'parent','id');
    }
-   function toAttr(){
+       function toAttr(){
        return $this->hasMany(p_attr_value::class,'product','id');
    }
    function toFeature(){
+       return $this->hasMany(p_attr_feature_value::class,'product','id');
 
    }
    function toPrice(){
        return $this->hasMany(p_price::class,'parent','id');
+   }
+   function toColor(){
+        return $this->hasMany(p_attr_color_detail::class,'product','id')->orderBy('ordered');
    }
 
 }

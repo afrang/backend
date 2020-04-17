@@ -23,9 +23,10 @@ class PProdcuts extends Migration
             $table->longText('help')->nullable();
             $table->longText('review')->nullable();
             $table->longText('description')->nullable();
-            $table->string('morecomment')->nullable();
+            $table->longText('morecomment')->nullable();
             $table->integer('parent')->nullable();
             $table->integer('status')->default(1);
+            $table->integer('colormode')->default(1);
             $table->boolean('special')->default(0);
 
             $table->longText('installation')->nullable();

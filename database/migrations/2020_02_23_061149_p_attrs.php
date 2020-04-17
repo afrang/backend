@@ -20,6 +20,7 @@ class PAttrs extends Migration
             $table->string('image')->nullable();
             $table->text('help')->nullable();
             $table->integer('parent');
+            $table->boolean('filtered')->default(false);
             $table->timestamps();
         });
     }

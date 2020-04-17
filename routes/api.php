@@ -21,13 +21,14 @@ Route::prefix('')->namespace('View')->group(function (){
 
         /* Group */
         Route::resource('/pgroup','Product\ProductGroupControllerViewController');
-        Route::resource('/psearch','Product\ProductGroupControllerViewController');
+        Route::resource('/psearch','Product\ProductSearchControllerView');
         /* Blog */
         Route::resource('/article','Blog\BlogArticle');
         Route::resource('/blog','Blog\BlogGroup');
 
         /* Product */
        Route::resource('/searchproduct','Product\ProductSearchControllerView');
+       Route::resource('/product','Product\ProductViewController');
 
 
 });
@@ -69,8 +70,12 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
     Route::resource('pdetail', 'Product\ProductDetailController');
     Route::resource('pimage', 'Product\ProductImageController');
     Route::resource('pattr', 'Product\ProductAttrController');
+    Route::resource('pfeature', 'Product\ProductFeatureController');
     Route::resource('popt', 'Product\ProdcutOptionController');
     Route::resource('pprice', 'Product\ProductPriceController');
+    Route::resource('pcolor', 'Product\ProductColorController');
+    Route::get('colororderup/{id}', 'Product\ProductColorController@colororderup');
+    Route::get('colororderdown/{id}', 'Product\ProductColorController@colororderdown');
 
 
 
