@@ -10,12 +10,20 @@ use Illuminate\Support\Facades\Hash;
 class loginPassport extends Controller
 {
     function AuthPassport(Request $request){
-        $result = filter_var($request->email, FILTER_VALIDATE_EMAIL );
-        if($result!=false){
+
             $user= new User();
           //  $password = Hash::make($request->password);
+            if (!filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
+                $user=$user->where('phone',$request->email)->first();
 
-            $user=$user->where('email',$request->email)->first();
+            }else{
+                $user=$user->where('email',$request->email)->first();
+
+            }
+
+            if($user==null){
+                return abort(422, trans('website.UserNotFound'));
+            }
             if (Hash::check($request->password,$user->password))
             {
               $token=$user->createToken('MyApp')->accessToken;
@@ -26,9 +34,9 @@ class loginPassport extends Controller
             ],200);
             }
             $check=Hash::check($request->password,$user->password);
-          
+
 
            // return $user;
-        }
+
     }
 }

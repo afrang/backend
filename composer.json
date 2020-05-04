@@ -17,7 +17,8 @@
         "laravel/passport": "^8.4",
         "laravel/telescope": "^3.1",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.0"
+        "laravel/ui": "^2.0",
+        "morilog/jalali": "3.*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

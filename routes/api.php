@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
+
 Route::prefix('')->namespace('View')->group(function (){
+
         Route::resource('/slider','Tools\GalleryViewController');
         Route::resource('/setting','Tools\SettingpageController');
         Route::resource('/firstpage','Pages\FirstpageController');
@@ -34,6 +36,28 @@ Route::prefix('')->namespace('View')->group(function (){
 });
 Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function () {
     Route::resource('profile', 'Profile\UserController');
+
+
+});
+Route::middleware('auth:api')->group(function () {
+        Route::post('statelist','View\Tools\AddressController@getstate');
+        Route::post('countylist','View\Tools\AddressController@countylist');
+        Route::post('citylist','View\Tools\AddressController@citylist');
+});
+
+
+
+Route::prefix('Profile')->namespace('Profile')->middleware('auth:api','CheckUser')->group(function () {
+    Route::resource('phone', 'PhoneController');
+    Route::resource('CompletedRegister', 'CompletedRegisterController');
+    Route::resource('SettinginvoiceController', 'SettinginvoiceController');
+    Route::resource('AddressController', 'AddressController');
+    Route::resource('invoice', 'invoice_invoice_controller');
+
+});
+//Route::prefix('profile')->namespace('Profile')
+Route::prefix('user')->namespace('User')->middleware('auth:api','CheckAdmin')->group(function () {
+
     Route::resource('Joblist', 'Profile\JoblistController');
     Route::resource('Roles', 'Profile\RolesController');
     Route::resource('Users', 'Profile\UsersController');
@@ -76,7 +100,10 @@ Route::prefix('user')->namespace('User')->middleware('auth:api')->group(function
     Route::resource('pcolor', 'Product\ProductColorController');
     Route::get('colororderup/{id}', 'Product\ProductColorController@colororderup');
     Route::get('colororderdown/{id}', 'Product\ProductColorController@colororderdown');
-
+    /* Setting Address And Price Devlivery */
+    Route::resource('delivery', 'Delivery\PostModeCityController');
+    Route::resource('optioninvoice', 'Delivery\PostModeCityController');
+    Route::resource('deliveryprice', 'Invoice\delivery_price_controller');
 
 
 

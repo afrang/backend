@@ -48,11 +48,19 @@ class ProductViewController extends Controller
      */
     public function show($id,p_prodcut $p_prodcut)
     {
-        $product=
-        $p_prodcut->where('url',$id)
-        ->with('toTag','toGroup','toImage','toAttr.toAttr','toAttr.toOptionValue.toPrice','toAttr.toOptionValue.toOption','toPrice','toColor.toColor','toFeature.toOptionValue')
-        ->first();
-        //return  $product->toAttr;
+
+        $product= $p_prodcut->where('url',$id)->with('toTag','toGroup','toImage','toAttr.toAttr','toAttr.toOptionValue.toPrice','toAttr.toOptionValue.toOption','toPrice','toColor.toColor','toFeature.toOptionValue','toFeature.toAttr.toOptions')->first();
+
+
+        if($product==null){
+            $product= $p_prodcut->where('id',$id)->with('toTag','toGroup','toImage','toAttr.toAttr','toAttr.toOptionValue.toPrice','toAttr.toOptionValue.toOption','toPrice','toColor.toColor','toFeature.toOptionValue','toFeature.toAttr.toOptions')->first();
+
+        }
+        if($product==null){
+            return  abort(404);
+        }
+
+      //  return  $product->toFeature;
         return  ProductViewResource::make($product);
     }
 

@@ -14,4 +14,5 @@ class p_attr_feature_value extends Model
     function toAttr(){
         return $this->hasOne(feature_attr::class,'id','attr');
     }
+
 }

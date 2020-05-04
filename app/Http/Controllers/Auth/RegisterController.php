@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Tools\SendSmsController;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -49,12 +50,10 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'lastname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'mobile' => ['required', 'string', 'min:10','max:12'],
+            'phone' => ['required',  'regex:/(09)[0-9]{9}/','digits:11','numeric', 'unique:Users'],
         ]);
     }
 
@@ -66,11 +65,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
+        $code=mt_rand(100000, 999999);
+        $createcode=Hash::make($code);
+        $msg=trans('website.wellcometoBoomcoyouractivecodeis').$code.trans('website.addresswebsite');
+          SendSmsController::sendingsms($data['phone'],$msg);
+
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'confrimcode' => $createcode,
             'password' => Hash::make($data['password']),
         ]);
+
     }
 }

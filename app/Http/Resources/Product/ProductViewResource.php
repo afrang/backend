@@ -39,7 +39,8 @@ class ProductViewResource extends JsonResource
             'colormode'=>$this->colormode,
             'groupname'=>$this->toGroup->name,
             'groupurl'=>$this->toGroup->url,
-            'attr'=>ProductAttrViewResource::collection($this->toAttr)
+            'attr'=>ProductAttrViewResource::collection($this->toAttr),
+            'feature'=>ProductFeatureResource::collection($this->toFeature)
 
         ];
     }
