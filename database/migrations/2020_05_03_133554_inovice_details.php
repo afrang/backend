@@ -24,6 +24,8 @@ class InoviceDetails extends Migration
             $table->integer('discount')->nullable();
             $table->integer('parentproduct')->nullable();
             $table->string('parent')->nullable();
+            $table->string('productname')->nullable();
+            $table->string('modelname')->nullable();
             $table->string('status')->default(1);
             $table->timestamps();
         });

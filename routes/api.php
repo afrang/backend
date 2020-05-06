@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::prefix('')->namespace('View')->group(function (){
+    Route::resource('/searchproduct','Product\ProductSearchControllerView');
+    Route::resource('product','Product\ProductViewController');
 
         Route::resource('/slider','Tools\GalleryViewController');
         Route::resource('/setting','Tools\SettingpageController');
@@ -29,8 +31,6 @@ Route::prefix('')->namespace('View')->group(function (){
         Route::resource('/blog','Blog\BlogGroup');
 
         /* Product */
-       Route::resource('/searchproduct','Product\ProductSearchControllerView');
-       Route::resource('/product','Product\ProductViewController');
 
 
 });
@@ -104,6 +104,8 @@ Route::prefix('user')->namespace('User')->middleware('auth:api','CheckAdmin')->g
     Route::resource('delivery', 'Delivery\PostModeCityController');
     Route::resource('optioninvoice', 'Delivery\PostModeCityController');
     Route::resource('deliveryprice', 'Invoice\delivery_price_controller');
+    /* Invoice */
+    Route::resource('invoices','Invoice\inovoiceController');
 
 
 

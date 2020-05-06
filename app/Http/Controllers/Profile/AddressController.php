@@ -104,8 +104,8 @@ class AddressController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,user_addresses $user_addresses)
     {
-        //
+        $user_addresses->where('parent',Auth::id())->where('id',$id)->delete();
     }
 }

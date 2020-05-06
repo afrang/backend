@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Invoice\invoice_detail_controller;
+use App\Http\Resources\invoiceshowresource;
 use App\Model\Invoice\invoice_detail;
 use App\Model\Invoice\invoice_information;
 use App\Model\Product\p_prodcut;
@@ -20,7 +21,7 @@ class invoice_invoice_controller extends Controller
      */
     public function index(Request $request,invoice_information $information)
     {
-       return $information->where('parent',Auth::id())->with('toDetial')->get();
+       return invoiceshowresource::collection($information->where('parent',Auth::id())->with('toDetial')->where('trackingcode','LIKE','%'.$request->tracknumber.'%')->paginate(10));
     }
 
     /**
@@ -68,9 +69,11 @@ class invoice_invoice_controller extends Controller
 
            $save                            =new invoice_detail();
            $save->Qty                       =$item['Qty'];
+           $save->productname              =$item['Qty'];
+           $save->modelname                 =$item['Qty'];
            $save->colorname                 =@$item['color']['to_color']['name'];
            $save->colorcode                 =@$item['color']['to_color']['code'];
-           $save->attrvalue                  =@$item['selectedOptions']['attrvalue']['name'].':'.@$item['selectedOptions']['optionvalue']['name'];
+           $save->attrvalue                 =@$item['selectedOptions']['attrvalue']['name'].':'.@$item['selectedOptions']['optionvalue']['name'];
            $save->optionvalue               =@$item['option']['attrvalue']['name'].':'.@$item['option']['optionvalue']['name'];
            $save->parentproduct             =$item['product'];
 
@@ -92,6 +95,8 @@ class invoice_invoice_controller extends Controller
         }
           $save->price                     =$price;
           $save->discount                  =$discount;
+          $save->productname                =$product->name;
+          $save->modelname                  =$product->model;
           $save->parent                     =$parent;
 
           $save->save();
@@ -105,9 +110,10 @@ class invoice_invoice_controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,invoice_information $information)
     {
-        //
+        return invoiceshowresource::make($information->where('parent',Auth::id())->with('toDetial')->where('trackingcode',$id)->first());
+
     }
 
     /**
